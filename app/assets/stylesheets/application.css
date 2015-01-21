@@ -33,14 +33,22 @@ html, body {
     left: 0;
     background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
     opacity: .6; 
-  }
+}
 }
 
 .names-header{
   color: white;
   display:table-cell;
   font-family:Montserrat;
-  font-size:3em;
   vertical-align: middle;
   text-align:center;
+  
 }
+
+  div.names{
+    font-size:4em;
+  }
+  div.date{
+    font-size:2em;
+  }
+
