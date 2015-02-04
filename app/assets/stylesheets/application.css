@@ -9,6 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require animate.css
  *= require_tree .
  */
 
@@ -50,7 +51,7 @@ html, body {
 }
 
 .intro-block{
-  height:100%;
+  min-height:100%;
   margin-bottom:-50px;
 }
 
