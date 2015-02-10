@@ -2,11 +2,20 @@
 //= require jquery_ujs
 //= require_tree .
 
-var ready = function(){
-	$('.names').removeClass("hidden");
-	$('.names').addClass('animated fadeInDown');
-	$('.date').removeClass("hidden");
-	$('.date').addClass('animated fadeInDown');
-}
+// var ready = function(){
+// 	$('.names').removeClass("hidden");
+// 	$('.names').addClass('animated fadeInDown');
+// 	$('.date').removeClass("hidden");
+// 	$('.date').addClass('animated fadeInDown');
 
-setTimeout(ready, 1500);
+// 	$("#location-link").click(function(){
+// 	    $('html, body').animate({
+// 	        scrollTop: $("#location").offset().top,
+// 	        easing: "easeInOutCubic"
+// 	    }, 500);
+// 	});
+// }
+
+// setTimeout(ready, 1200);
+
+
