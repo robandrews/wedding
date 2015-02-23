@@ -28,6 +28,27 @@ var ready = function(){
       easing: "swing"
     })
   })
+
+  $(".ind-location").mouseover(function(event){
+  	var selector = "#" + $(event.target).data("name");
+  	$(selector).addClass("location-active");
+  	if(selector == "#ceremony"){
+  		toggleBounce(churchMarker);
+  	}else{
+  		toggleBounce(receptionMarker);
+  	}
+  })
+
+  $(".ind-location").mouseout(function(event){
+  	$(".ind-location").removeClass("location-active");
+  	var selector = "#" + $(event.target).data("name");
+  	if( selector == "#ceremony" ){
+  		toggleBounce(churchMarker);	
+  	}else{
+  		toggleBounce(receptionMarker);	
+  	}
+  	
+  })
 }
 
 $(ready)
@@ -46,7 +67,7 @@ var map;
 
 function initialize() {
   var mapOptions = {
-    zoom: 10,
+    zoom: 11,
     center: center,
     scrollwheel: false
   };
@@ -71,9 +92,8 @@ function initialize() {
                             google.maps.event.addListener(churchMarker, 'click', toggleBounce);
 }
 
-function toggleBounce() {
-
-  if (marker.getAnimation() != null) {
+function toggleBounce(marker) {
+  if (!marker || marker.getAnimation() != null) {
     marker.setAnimation(null);
   } else {
     marker.setAnimation(google.maps.Animation.BOUNCE);

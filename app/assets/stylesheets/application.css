@@ -32,13 +32,17 @@ html, body {
 
 .location-panel{
   height:100%;
-  padding-top:100px;
-  padding-bottom:80px;
 }
 
 #map-canvas{
-  height:500px;
-  width:500px;
+  height:100%;
+  width:50%;
+  float:left;
+}
+
+.location-text{
+  margin-left:50%;
+  padding-top:10%;
 }
 
 .travel-panel{
@@ -49,9 +53,9 @@ html, body {
 .names-header{
   color: white;
   display:table-cell;
-  font-family:Montserrat;
   vertical-align: middle;
   text-align:center;
+  font-family:'Open Sans', sans-serif;
   margin-top:170px;
 }
 
@@ -68,6 +72,31 @@ html, body {
 .home-link{
   color:white;
   text-decoration: none;
+  font-family:'Open Sans', sans-serif;
+}
+
+.ind-location{
+  margin-bottom:20%;
+  padding:10px;
+}
+
+.location-text-header{
+    font-size:3em;
+    font-weight:300;
+}
+
+.location-text-name{
+    font-size:1.5em;
+    font-weight:600;
+}
+
+.location-text-address{
+    font-size:1.5em;
+    font-weight:600;
+}
+
+.location-active{
+  background-color:lightgray;
 }
 
 a:hover, a:visited, a:link, a:active{
@@ -79,10 +108,12 @@ a:hover, a:visited, a:link, a:active{
 }
 
 div.names{
-  font-size:5em;
+  font-size:6em;
+  font-weight: 300;
 }
 div.date{
   font-size:2em;
+  font-weight: 400;
 }
 div.button{
   background-color:white;
