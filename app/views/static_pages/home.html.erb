@@ -8,33 +8,40 @@
 
   <div class="home-nav animated fadeinup delayed-more">
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-2 col-md-offset-1 pointer-div">
         <div class="col-md-6 col-md-offset-3">
-          <a class="home-link" id="location-link" href='#'>Location</a>
+          <span class="home-link" id="location-link" data-name="location" href='#location'>Location</span>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="col-md-6 col-md-offset-3">
-          <a class="home-link" href='#'>ScrollButton</a>
+      <div class="col-md-2">
+        <div class="col-md-6 col-md-offset-3 pointer-div">
+          <span class="home-link" data-name="travel" href='#'>Travel</span>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="col-md-6 col-md-offset-3">
-          <a class="home-link" href='#'>ScrollButton</a>
+      <div class="col-md-2">
+        <div class="col-md-6 col-md-offset-3 pointer-div">
+          <span class="home-link" data-name="story" href='#'>Our Story</span>
         </div>
       </div>
-      <div class="col-md-3">
-        <div class="col-md-6 col-md-offset-3">
-          <a class="home-link" href='#'>ScrollButton</a>
+      <div class="col-md-2">
+        <div class="col-md-6 col-md-offset-3 pointer-div">
+          <span class="home-link" data-name="registry" href='#'>Registry</span>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="col-md-8 col-md-offset-2 pointer-div">
+          <span class="home-link" data-name="guest" href='#'>Guest Book</span>
         </div>
       </div>
     </div>
   </div>
 </div>
+
 <div class="location-panel" id="location">
   <div class="col-md-10 col-md-offset-1">
-    <iframe width="900" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=first%20presbyterian%20santa%20rosa&key=AIzaSyDPVMWnTZ1D87_5J1aWH_5Rn7p6iwEsqI8"></iframe>
+    <div id="map-canvas"></div>
   </div>
 </div>
-<div class="wedding-party">
+
+<div id="travel" class="travel-panel">
 </div>
