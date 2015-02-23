@@ -42,11 +42,11 @@ html, body {
 
 .location-text{
   margin-left:50%;
-  padding-top:10%;
+  padding-top:7%;
 }
 
 .travel-panel{
-  background-color:black;
+  background-color:pink;
   height:100%;
 }
 
@@ -75,12 +75,13 @@ html, body {
   font-family:'Open Sans', sans-serif;
 }
 
-.ind-location{
+.ind-location, .ind-travel{
   margin-bottom:20%;
   padding:10px;
+  padding-left:8%;
 }
 
-.location-text-header{
+.location-text-header, .travel-header{
     font-size:3em;
     font-weight:300;
 }
