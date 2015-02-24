@@ -75,8 +75,22 @@ html, body {
   padding-top:3%;
 }
 
+.travel-hotel{
+  text-align: center;
+}
 
+.travel-hotels-row{
+  padding-right:8%;
+}
 
+p.travel-hotel-info {
+  margin-bottom:0px;
+}
+p.travel-hotel-title {
+  font-weight: 300;
+  font-size:1.3em;
+  margin-bottom: 0px;
+}
 .names-header{
   color: white;
   display:table-cell;
