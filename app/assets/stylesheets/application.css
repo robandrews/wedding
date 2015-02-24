@@ -30,7 +30,7 @@ html, body {
   position:relative;
 }
 
-.location-panel{
+.location-panel, .story-panel{
   height:100%;
 }
 
@@ -48,7 +48,10 @@ html, body {
 .travel-panel{
   background-color:pink;
   height:100%;
+  padding-top:3%;
 }
+
+
 
 .names-header{
   color: white;
@@ -75,7 +78,7 @@ html, body {
   font-family:'Open Sans', sans-serif;
 }
 
-.ind-location, .ind-travel{
+.ind-location{
   margin-bottom:20%;
   padding:10px;
   padding-left:8%;
@@ -100,6 +103,18 @@ html, body {
   background-color:lightgray;
 }
 
+.ind-travel{
+  margin-bottom:5%;
+  padding:10px;
+  padding-left:8%;
+}
+
+.travel-body{
+  padding-top:3%;
+  padding-left:3%;
+  font-size:1.3em;
+  font-weight:600;
+}
 a:hover, a:visited, a:link, a:active{
   text-decoration: none;
 }
@@ -120,6 +135,12 @@ div.button{
   background-color:white;
 }
 
+/*Mobile*/
+@media screen and (max-device-width: 800px) {
+  #map-canvas{
+    display:none;
+  }
+}
 
 /* Fade in up from bashton.com/managed-magento-hosting*/
 /* fade In Up */

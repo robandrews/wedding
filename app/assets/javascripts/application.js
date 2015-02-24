@@ -32,22 +32,13 @@ var ready = function(){
   $(".ind-location").mouseover(function(event){
   	var selector = "#" + $(event.target).data("name");
   	$(selector).addClass("location-active");
-  	if(selector == "#ceremony"){
-  		toggleBounce(churchMarker);
-  	}else{
-  		toggleBounce(receptionMarker);
-  	}
+  	toggleBounce(selector)
   })
 
   $(".ind-location").mouseout(function(event){
   	$(".ind-location").removeClass("location-active");
   	var selector = "#" + $(event.target).data("name");
-  	if( selector == "#ceremony" ){
-  		toggleBounce(churchMarker);	
-  	}else{
-  		toggleBounce(receptionMarker);	
-  	}
-  	
+    toggleBounce(selector)
   })
 }
 
@@ -92,10 +83,11 @@ function initialize() {
                             google.maps.event.addListener(churchMarker, 'click', toggleBounce);
 }
 
-function toggleBounce(marker) {
-  if (!marker || marker.getAnimation() != null) {
+function toggleBounce(selector) {
+  var marker = selector == "#ceremony" ? churchMarker : receptionMarker;
+  if(!marker || marker.getAnimation() != null) {
     marker.setAnimation(null);
-  } else {
+  }else {
     marker.setAnimation(google.maps.Animation.BOUNCE);
   }
 }
