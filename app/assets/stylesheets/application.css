@@ -140,6 +140,9 @@ div.button{
   #map-canvas{
     display:none;
   }
+  .location-text{
+    margin-left:0;
+  }
 }
 
 /* Fade in up from bashton.com/managed-magento-hosting*/
