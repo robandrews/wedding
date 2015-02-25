@@ -221,6 +221,13 @@ div.button{
   height:100%;
   background-color: lightgreen;
 }
+
+/*Guest book section*/
+.book-panel{
+  height:100%;
+  background-color: dimgrey;
+}
+
 /*Mobile*/
 @media screen and (max-device-width: 800px) {
   #map-canvas{
