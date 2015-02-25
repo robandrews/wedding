@@ -55,12 +55,13 @@ var reception = new google.maps.LatLng(38.6204845, -122.864779);
 var center = new google.maps.LatLng(38.543795, -122.772683);
 var marker;
 var map;
-
+var styles = [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
 function initialize() {
   var mapOptions = {
     zoom: 11,
     center: center,
-    scrollwheel: false
+    scrollwheel: false,
+    styles: styles
   };
 
   map = new google.maps.Map(document.getElementById('map-canvas'),
@@ -79,8 +80,6 @@ function initialize() {
                               animation: google.maps.Animation.DROP,
                               position: reception
                             });
-
-                            google.maps.event.addListener(churchMarker, 'click', toggleBounce);
 }
 
 function toggleBounce(selector) {

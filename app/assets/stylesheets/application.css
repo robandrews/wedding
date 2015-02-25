@@ -70,13 +70,28 @@ html, body {
 }
 
 .travel-panel{
-  background-color:pink;
+  background: url('https://s3-us-west-1.amazonaws.com/andrews-wedding/vineyard_grad-50.png') center center no-repeat;
+  background-size: cover;
   height:100%;
   padding-top:3%;
+  position:relative;
+  color:white;
+  z-index:-3;
 }
-
+.travel-panel-overlay{
+  margin-top:-3%;
+  position:absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  height:100%;
+  width:100%;
+  z-index:-2;
+}
 .travel-hotel{
   text-align: center;
+  color:black;
+}
+.well{
+  background-color: rgba(0, 0, 0, 0.0);
 }
 
 .travel-hotels-row{
@@ -156,6 +171,10 @@ p.travel-hotel-title {
 a:hover, a:visited, a:link, a:active{
   text-decoration: none;
 }
+a.hover .white-hover{
+  text-decoration: none;
+  color:white;
+}
 
 .pointer-div{
   cursor:pointer;
@@ -177,9 +196,31 @@ div.button{
 /*Story section*/
 .story-panel{
   padding-right:5%;
-  padding-top:3%;
+  padding-top:2%;
+  padding-left:5%;
 }
 
+.story-header{
+  padding-left:10%;
+}
+.story-text{
+  font-size:1.2em;
+}
+
+.story-text-panel{
+  padding-left: 4% !important;
+  padding-right: 4% !important;
+}
+
+.story-pic{
+  width:100%;
+  border-radius:10px;
+}
+/*Registry section*/
+.registry-panel{
+  height:100%;
+  background-color: lightgreen;
+}
 /*Mobile*/
 @media screen and (max-device-width: 800px) {
   #map-canvas{
