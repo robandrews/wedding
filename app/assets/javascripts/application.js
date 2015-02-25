@@ -92,4 +92,4 @@ function toggleBounce(selector) {
   }
 }
 
-google.maps.event.addDomListener(window, 'load', function(){setTimeout(initialize, 1000)});
+google.maps.event.addDomListener(window, 'load', function(){setTimeout(initialize, 1500)});
