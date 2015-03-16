@@ -12,7 +12,9 @@
  *= require animate.css
  *= require_tree .
  */
-
+*{
+  margin-right:0px !important;
+}
 html, body {
   width: 100%;
   height: 100%;
@@ -55,7 +57,7 @@ html, body {
 }
 
 .location-panel, .story-panel{
-  height:100%;
+  min-height:100%;
 }
 
 #map-canvas{
@@ -72,7 +74,7 @@ html, body {
 .travel-panel{
   background: url('https://s3-us-west-1.amazonaws.com/andrews-wedding/vineyard_grad-50.png') center center no-repeat;
   background-size: cover;
-  height:100%;
+  min-height:100%;
   padding-top:3%;
   position:relative;
   color:white;
@@ -166,7 +168,7 @@ p.travel-hotel-title {
   padding-top:3%;
   padding-left:3%;
   font-size:1.3em;
-  font-weight:600;
+  font-weight:300;
 }
 a:hover, a:visited, a:link, a:active{
   text-decoration: none;
@@ -218,14 +220,38 @@ div.button{
 }
 /*Registry section*/
 .registry-panel{
-  height:100%;
+  height:50%;
   background-color: lightgreen;
+}
+
+.registry-bar{
+  /*display:table-cell;
+  vertical-align: middle;*/
+  padding-left:10%;
+  padding-top:10%;
+  /*font-family:'Open Sans', sans-serif;
+  margin-top:170px;*/
+}
+
+#sur-la-table{
+  display: block;
+  text-decoration: none;
+  width: 24em;
+  height: auto;
+  cursor:pointer;
 }
 
 /*Guest book section*/
 .book-panel{
-  height:100%;
+  height:50%;
   background-color: dimgrey;
+}
+
+.book-form{
+  padding-top:5%;
+}
+.book-buttons{
+  padding-left:2%;
 }
 
 /*Mobile*/
