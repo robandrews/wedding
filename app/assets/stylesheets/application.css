@@ -56,8 +56,12 @@ html, body {
   position:absolute;
 }
 
-.location-panel, .story-panel{
-  min-height:100%;
+.location-panel{
+  height:100%;
+}
+
+.story-panel{
+  min-height: 100%;
 }
 
 #map-canvas{
