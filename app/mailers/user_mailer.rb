@@ -4,6 +4,6 @@ class UserMailer < ActionMailer::Base
   	@name = params["name"]
   	@email = params["email"]
   	@body = params["body"]
-  	mail(to: "robert.alan.andrews@gmail.com", from: @email, subject:"Wedding Message from #{@name}")
+  	mail(to: "robert.alan.andrews@gmail.com", subject:"Wedding Message from #{@name}")
   end
 end

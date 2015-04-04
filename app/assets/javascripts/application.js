@@ -32,7 +32,7 @@ var ready = function(){
     if(data.name.length < 3 && data.name.length > 0){ret.push("Is your name really that short?")};
     if(data.body == ""){ret.push("Message is blank!")};
     var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-    if(!re.test(data.email)){ret.push("Email address is invalid")};
+    if(!re.test(data.email)){ret.push("Email address is invalid!")};
     return ret
   };
 
@@ -55,7 +55,10 @@ var ready = function(){
       method: "POST",
       data: data
     }).success(function(){
-      swal("Delived!", "Maya and Rob will receive your message shortly!", "success")
+      swal("Delived!", "Maya and Rob will receive your message shortly!", "success");
+      var name = $("#msg-name").val("");
+    var email = $("#msg-email").val("");
+    var body = $("#msg-body").val("");
     }).error(function(){
       swal("Uh oh!", "Something went wrong.  Please try again.", "error")
     })
