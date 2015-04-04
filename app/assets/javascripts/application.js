@@ -1,7 +1,8 @@
 //= require jquery
 //= require jquery_ujs
-//= bootstrap.min.js
 //= require animatescroll.min.js
+//= require flat-ui.min.js
+//= require sweet-alert.min.js
 //= require_tree .
 
 var ready = function(){
@@ -24,10 +25,54 @@ var ready = function(){
   	var selector = "#" + $(event.target).data("name");
     toggleBounce(selector);
   });
+
+  function validateData(data){
+    var ret = [];
+    if(data.name == ""){ret.push("Name is blank!")};
+    if(data.name.length < 3 && data.name.length > 0){ret.push("Is your name really that short?")};
+    if(data.body == ""){ret.push("Message is blank!")};
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    if(!re.test(data.email)){ret.push("Email address is invalid")};
+    return ret
+  };
+
+  $('.submit-form').click(function(event){
+    event.preventDefault();
+    var name = $("#msg-name").val();
+    var email = $("#msg-email").val();
+    var body = $("#msg-body").val();
+    var data = {name: name, email: email, body: body};
+
+    var errors = validateData(data)
+    if(errors.length){
+      var err = "Please fix the following things in the form:<br>" + errors.join("<br>");
+      swal({type: "error", title: "Uh oh.", text: err , html: true});
+      return
+    }
+
+    $.ajax({
+      url: "/messages",
+      method: "POST",
+      data: data
+    }).success(function(){
+      swal("Delived!", "Maya and Rob will receive your message shortly!", "success")
+    }).error(function(){
+      swal("Uh oh!", "Something went wrong.  Please try again.", "error")
+    })
+  })
+
+  $('.reset-form').click(function(event){
+    event.preventDefault();
+    swal({   title: "Are you sure?",   text: "This will erase all the fields.",   type: "warning",   showCancelButton: true,   confirmButtonColor: "#DD6B55",   confirmButtonText: "Reset",   closeOnConfirm: true }, 
+      function(){
+        $("#msg-name").val("");
+        $("#msg-email").val("");
+        $("#msg-body").val("");  
+     });
+  });
 };
 
 $(ready);
-
 
 
 // The following example creates a marker in Stockholm, Sweden

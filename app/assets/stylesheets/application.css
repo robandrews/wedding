@@ -10,6 +10,9 @@
  *
  *= require_self
  *= require animate.css
+ *= require bootstrap.min.css
+ *= require flat-ui.min.css
+ *= require sweet-alert.css
  *= require_tree .
  */
 *{
@@ -20,6 +23,7 @@ html, body {
   height: 100%;
   padding: 0px !important;
   margin: 0px !important;
+  font-family:'Open Sans', sans-serif;
 }
 
 
@@ -109,8 +113,13 @@ p.travel-hotel-info {
 }
 p.travel-hotel-title {
   font-weight: 300;
-  font-size:1.3em;
-  margin-bottom: 0px;
+  font-size:1em;
+  margin-bottom: -10px;
+
+}
+
+.travel-info-block{
+  padding-top:15px;
 }
 .names-header{
   color: white;
@@ -135,6 +144,7 @@ p.travel-hotel-title {
   color:white;
   text-decoration: none;
   font-family:'Open Sans', sans-serif;
+  font-size:0.8em;
 }
 
 .ind-location{
@@ -163,13 +173,13 @@ p.travel-hotel-title {
 }
 
 .ind-travel{
-  margin-bottom:5%;
+  margin-bottom:2%;
   padding:10px;
   padding-left:8%;
 }
 
 .travel-body{
-  padding-top:3%;
+  padding-top:1%;
   padding-left:3%;
   font-size:1.3em;
   font-weight:300;
@@ -187,11 +197,11 @@ a.hover .white-hover{
 }
 
 div.names{
-  font-size:6em;
+  font-size:5em;
   font-weight: 300;
 }
 div.date{
-  font-size:2em;
+  font-size:1.6em;
   font-weight: 400;
 }
 div.button{
@@ -202,20 +212,21 @@ div.button{
 /*Story section*/
 .story-panel{
   padding-right:5%;
-  padding-top:2%;
   padding-left:5%;
 }
 
 .story-header{
-  padding-left:10%;
+  padding-right:1%;
+
 }
 .story-text{
-  font-size:1.2em;
+  font-size:1.25em;
 }
 
 .story-text-panel{
   padding-left: 4% !important;
   padding-right: 4% !important;
+  font-size:0.7em;
 }
 
 .story-pic{
@@ -225,7 +236,7 @@ div.button{
 /*Registry section*/
 .registry-panel{
   height:50%;
-  background-color: lightgreen;
+  background-color: #c1cdcd;
 }
 
 .registry-bar{
@@ -248,14 +259,32 @@ div.button{
 /*Guest book section*/
 .book-panel{
   height:50%;
-  background-color: dimgrey;
 }
 
-.book-form{
-  padding-top:5%;
+.msg-priv{
+  float:right;
+  font-size:0.8em;
+}
+
+.msg-box{
+  margin-top:15px;
+}
+
+#msg-body{
+  height:100px;
 }
 .book-buttons{
-  padding-left:2%;
+  margin-top:15px;
+}
+.book-button{
+  margin-top:5px;
+  width:100%;
+}
+.msg-btn{
+  width:100%;
+}
+.book-form{
+  padding-top:8%;
 }
 
 /*Mobile*/

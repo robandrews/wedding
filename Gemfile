@@ -49,3 +49,8 @@ gem 'annotate'
 group :production do
   gem 'rails_12factor'
 end
+
+group :development, :test do
+	gem "letter_opener"
+end
+
