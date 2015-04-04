@@ -217,6 +217,7 @@ div.button{
 
 .story-header{
   padding-right:1%;
+  z-index:3;
 
 }
 .story-text{
@@ -232,6 +233,7 @@ div.button{
 .story-pic{
   width:100%;
   border-radius:10px;
+  z-index:1;
 }
 /*Registry section*/
 .registry-panel{
