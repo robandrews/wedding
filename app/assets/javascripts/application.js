@@ -55,7 +55,7 @@ var ready = function(){
       method: "POST",
       data: data
     }).success(function(){
-      swal("Delived!", "Maya and Rob will receive your message shortly!", "success");
+      swal("Delivered!", "Maya and Rob will receive your message shortly!", "success");
       var name = $("#msg-name").val("");
     var email = $("#msg-email").val("");
     var body = $("#msg-body").val("");
