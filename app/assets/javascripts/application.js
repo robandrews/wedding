@@ -7,11 +7,13 @@
 
 var ready = function(){
   $(".home-link").click(function(event){
-    event.preventDefault();
+
     var name = $(event.target).attr("data-name");
     $("#"+name).animatescroll({
       easing: "swing"
     });
+    var loc = window.location.hostname;
+    window.location = "#" + name
   });
 
   $(".ind-location").mouseover(function(event){
@@ -83,14 +85,14 @@ $(ready);
 // // the animation between a BOUNCE animation and no animation.
 //38.452427,-122.703247
 var church = new google.maps.LatLng(38.452427, -122.703247);
-var reception = new google.maps.LatLng(38.6204845, -122.864779);
-var center = new google.maps.LatLng(38.543795, -122.772683);
+var reception = new google.maps.LatLng(38.458579, -122.616944);
+var center = new google.maps.LatLng(38.455503, -122.660096);
 var marker;
 var map;
 var styles = [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}];
 function initialize() {
   var mapOptions = {
-    zoom: 11,
+    zoom: 12,
     center: center,
     scrollwheel: false,
     styles: styles
